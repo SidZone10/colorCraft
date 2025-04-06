@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 Painting Trends | ColorCraft Masters</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== Global Styles ===== */
+        :root {
+            --primary: #4a6fa5;
+            --primary-dark: #3a5a8a;
+            --secondary: #ff9a3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #28a745;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: #e68a2e;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ===== Header & Navigation ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* ===== Page Header ===== */
+        .page-header {
+            height: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary);
+        }
+
+        .breadcrumb .separator {
+            color: #ccc;
+        }
+
+        /* ===== Trends Intro ===== */
+        .trends-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .trends-intro p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        /* ===== Trends Navigation ===== */
+        .trends-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .trend-nav-btn {
+            padding: 12px 25px;
+            background: transparent;
+            border: 2px solid var(--primary);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .trend-nav-btn.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .trend-nav-btn:hover:not(.active) {
+            background: rgba(74, 111, 165, 0.1);
+        }
+
+        /* ===== Trend Sections ===== */
+        .trend-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .trend-section.active {
+            display: block;
+        }
+
+        /* ===== Trend Card ===== */
+        .trend-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+
+        .trend-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .trend-card-header {
+            padding: 25px;
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .trend-card-header i {
+            font-size: 1.8rem;
+            color: var(--secondary);
+        }
+
+        .trend-card-header h3 {
+            font-size: 1.8rem;
+        }
+
+        .trend-card-content {
+            padding: 30px;
+        }
+
+        .trend-card-content p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        /* ===== Color Palettes ===== */
+        .color-palettes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .color-box {
+            height: 120px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 15px;
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+        }
+
+        .color-box span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== Technique Examples ===== */
+        .technique-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .technique-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .technique-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .technique-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .technique-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .technique-item:hover .technique-img img {
+            transform: scale(1.1);
+        }
+
+        .technique-info {
+            padding: 20px;
+        }
+
+        .technique-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .technique-info p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+
+        /* ===== International Palettes Section ===== */
+        .international {
+            background-color: #f1f5f9;
+        }
+
+        .palette-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 30px;
+        }
+
+        .palette-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .palette-header {
+            padding: 20px;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .palette-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .palette-header p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .palette-colors {
+            display: flex;
+            height: 120px;
+        }
+
+        .palette-color {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 10px;
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            position: relative;
+            font-size: 0.8rem;
+        }
+
+        .palette-color::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+        }
+
+        .palette-color span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .palettes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* ===== Eco-Friendly Section ===== */
+        .eco-friendly {
+            background-color: var(--white);
+        }
+
+        .eco-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+
+        .eco-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .eco-text p {
+            margin-bottom: 15px;
+        }
+
+        .eco-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .eco-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .eco-feature i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .eco-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .eco-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .eco-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ===== CTA Section ===== */
+        .cta {
+            background: linear-gradient(rgba(74, 111, 165, 0.9), rgba(74, 111, 165, 0.9)), url('https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-col p {
+            margin-bottom: 15px;
+            color: #adb5bd;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #adb5bd;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* ===== Animations ===== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ===== Responsive Styles ===== */
+        @media (max-width: 992px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .color-palettes {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .eco-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .eco-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+            
+            .trend-nav-btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .color-box {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Color<span>Craft</span> Masters</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="trends.html" class="active">Trends</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>2024 Painting Trends</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <a href="trends.html">Trends</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trends Intro -->
+    <section class="section trends-intro-section">
+        <div class="container">
+            <div class="trends-intro">
+                <h2 class="section-title">Discover the Hottest Painting Trends of 2024</h2>
+                <p>Stay ahead of the curve with our expert insights into the latest color palettes, techniques, and materials transforming homes this year. Whether you're planning a refresh or a complete makeover, these trends will inspire your next project.</p>
+                <a href="#color-trends" class="btn">Explore Color Trends</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trends Navigation -->
+    <section class="section trends-nav-section" style="background-color: #f1f5f9;">
+        <div class="container">
+            <div class="trends-nav">
+                <button class="trend-nav-btn active" data-trend="color-trends">Color Trends</button>
+                <button class="trend-nav-btn" data-trend="application-trends">Application Trends</button>
+                <button class="trend-nav-btn" data-trend="international-trends">Global Palettes</button>
+                <button class="trend-nav-btn" data-trend="eco-trends">Eco Trends</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Trends Section -->
+    <section id="color-trends" class="section trend-section active">
+        <div class="container">
+            <div class="section-title">
+                <h2>2024 Color Trends</h2>
+                <p>The most popular color palettes transforming spaces this year</p>
+            </div>
+
+            <!-- Biophilic Colors -->
+            <div class="trend-card">
+                <div class="trend-card-header">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Biophilic Colors</h3>
+                </div>
+                <div class="trend-card-content">
+                    <p>Nature continues to inspire interior design with earthy greens, warm browns, and soft blues that create calming, organic spaces. These colors help bring the outdoors in and establish a sense of tranquility in any room.</p>
+                    <p>Perfect for living rooms, bedrooms, and home offices where you want to create a peaceful retreat from the modern world.</p>
+                    
+                    <h4>Recommended Color Palette:</h4>
+                    <div class="color-palettes">
+                        <div class="color-box" style="background-color: #6b8e4e;"><span>Sage Green</span></div>
+                        <div class="color-box" style="background-color: #a68a64;"><span>Warm Taupe</span></div>
+                        <div class="color-box" style="background-color: #5f8a8b;"><span>Misty Blue</span></div>
+                        <div class="color-box" style="background-color: #d4b483;"><span>Golden Wheat</span></div>
+                        <div class="color-box" style="background-color: #3a5a40;"><span>Forest Green</span></div>
+                    </div>
+                    
+                    <h4>Best Pairings:</h4>
+                    <ul style="margin-bottom: 20px; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">Pair sage greens with natural wood tones</li>
+                        <li style="margin-bottom: 8px;">Combine misty blues with crisp whites</li>
+                        <li style="margin-bottom: 8px;">Use forest green as an accent with neutral walls</li>
+                    </ul>
+                    
+                    <a href="contact.html" class="btn">Get Color Consultation</a>
+                </div>
+            </div>
+
+            <!-- Warm Neutrals -->
+            <div class="trend-card">
+                <div class="trend-card-header">
+                    <i class="fas fa-fire"></i>
+                    <h3>Warm Neutrals</h3>
+                </div>
+                <div class="trend-card-content">
+                    <p>Cool grays are giving way to warmer beiges, terracottas, and creamy whites that create cozy, inviting atmospheres. These hues work beautifully in any room and pair well with both modern and traditional decor.</p>
+                    <p>Ideal for creating a welcoming foundation throughout your home that allows for colorful accents and artwork to shine.</p>
+                    
+                    <h4>Recommended Color Palette:</h4>
+                    <div class="color-palettes">
+                        <div class="color-box" style="background-color: #e6d5b8;"><span>Cream</span></div>
+                        <div class="color-box" style="background-color: #c97b5f;"><span>Terracotta</span></div>
+                        <div class="color-box" style="background-color: #a37a5e;"><span>Warm Taupe</span></div>
+                        <div class="color-box" style="background-color: #f0e4d4;"><span>Linen</span></div>
+                        <div class="color-box" style="background-color: #b88b5e;"><span>Caramel</span></div>
+                    </div>
+                    
+                    <h4>Application Tips:</h4>
+                    <ul style="margin-bottom: 20px; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">Use lighter shades to make small rooms feel larger</li>
+                        <li style="margin-bottom: 8px;">Darker warm neutrals add sophistication to dining rooms</li>
+                        <li style="margin-bottom: 8px;">Pair with black accents for modern contrast</li>
+                    </ul>
+                    
+                    <a href="contact.html" class="btn">Get Color Consultation</a>
+                </div>
+            </div>
+
+            <!-- Bold Accents -->
+            <div class="trend-card">
+                <div class="trend-card-header">
+                    <i class="fas fa-bold"></i>
+                    <h3>Bold Accent Colors</h3>
+                </div>
+                <div class="trend-card-content">
+                    <p>While neutral bases remain popular, bold accent colors are making statements in unexpected ways. Deep blues, moody greens, and rich burgundies add drama and personality when used strategically.</p>
+                    <p>Great for feature walls, cabinetry, front doors, and other architectural elements you want to highlight.</p>
+                    
+                    <h4>Recommended Color Palette:</h4>
+                    <div class="color-palettes">
+                        <div class="color-box" style="background-color: #2c3e5d;"><span>Navy Blue</span></div>
+                        <div class="color-box" style="background-color: #3a5a40;"><span>Moody Green</span></div>
+                        <div class="color-box" style="background-color: #6d2e46;"><span>Burgundy</span></div>
+                        <div class="color-box" style="background-color: #5e4a5a;"><span>Mauve</span></div>
+                        <div class="color-box" style="background-color: #d4a373;"><span>Burnt Orange</span></div>
+                    </div>
+                    
+                    <h4>How to Use Bold Colors:</h4>
+                    <ul style="margin-bottom: 20px; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">Paint interior doors for unexpected pops of color</li>
+                        <li style="margin-bottom: 8px;">Use on kitchen islands or lower cabinets</li>
+                        <li style="margin-bottom: 8px;">Create an accent wall behind beds or sofas</li>
+                        <li style="margin-bottom: 8px;">Paint ceilings for a dramatic effect</li>
+                    </ul>
+                    
+                    <a href="contact.html" class="btn">Get Color Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Trends Section -->
+    <section id="application-trends" class="section trend-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Application Trends</h2>
+                <p>Innovative techniques transforming how we use color</p>
+            </div>
+
+            <!-- Color Drenching -->
+            <div class="trend-card">
+                <div class="trend-card-header">
+                    <i class="fas fa-fill-drip"></i>
+                    <h3>Color Drenching</h3>
+                </div>
+                <div class="trend-card-content">
+                    <p>This bold technique involves painting walls, trim, ceilings and even doors the same color for a cohesive, immersive effect. It creates visual continuity and makes spaces feel larger and more intentional.</p>
+                    <p>Particularly effective in small spaces, powder rooms, and bedrooms where you want to create a cocoon-like atmosphere.</p>
+                    
+                    <h4>Best Colors for Drenching:</h4>
+                    <div class="color-palettes">
+                        <div class="color-box" style="background-color: #4a6fa5;"><span>Drenched Blue</span></div>
+                        <div class="color-box" style="background-color: #5e4a5a;"><span>Drenched Mauve</span></div>
+                        <div class="color-box" style="background-color: #3a5a40;"><span>Drenched Green</span></div>
+                        <div class="color-box" style="background-color: #6b8e4e;"><span>Drenched Sage</span></div>
+                        <div class="color-box" style="background-color: #2c3e5d;"><span>Drenched Navy</span></div>
+                    </div>
+                    
+                    <h4>Technique Examples:</h4>
+                    <div class="technique-examples">
+                        <div class="technique-item">
+                            <div class="technique-img">
+                                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Drenched Living Room">
+                            </div>
+                            <div class="technique-info">
+                                <h4>Living Room</h4>
+                                <p>Create a cozy, intimate space by drenching all surfaces in a warm neutral</p>
+                            </div>
+                        </div>
+                        
+                        <div class="technique-item">
+                            <div class="technique-img">
+                                <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Drenched Bedroom">
+                            </div>
+                            <div class="technique-info">
+                                <h4>Bedroom</h4>
+                                <p>Drench in soothing blues or greens for a restful retreat</p>
+                            </div>
+                        </div>
+                        
+                        <div class="technique-item">
+                            <div class="technique-img">
+                                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Drenched Bathroom">
+                            </div>
+                            <div class="technique-info">
+                                <h4>Bathroom</h4>
+                                <p>Small bathrooms gain drama when fully drenched in color</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="services.html" class="btn">Learn About Our Services</a>
+                </div>
+            </div>
+
+            <!-- Two-Tone Walls -->
+            <div class="trend-card">
+                <div class="trend-card-header">
+                    <i class="fas fa-ruler-combined"></i>
+                    <h3>Two-Tone Walls</h3>
+                </div>
+                <div class="trend-card-content">
+                    <p>Creative use of color blocking with horizontal, vertical, or curved dividers between two complementary colors. This adds visual interest and can help define different areas in open-concept spaces.</p>
+                    <p>Works particularly well in living rooms, dining areas, and children's bedrooms where you want to create distinct zones.</p>
+                    
+                    <h4>Popular Color Combinations:</h4>
+                    <div class="color-palettes">
+                        <div class="color-box" style="background: linear-gradient(to right, #4a6fa5 50%, #ff9a3c 50%);"><span>Blue & Orange</span></div>
+                        <div class="color-box" style="background: linear-gradient(to right, #6b8e4e 50%, #e6d5b8 50%);"><span>Green & Cream</span></div>
+                        <div class="color-box" style="background: linear-gradient(to right, #c97b5f 50%, #3a5a40 50%);"><span>Terracotta & Green</span></div>
+                        <div class="color-box" style="background: linear-gradient(to right, #5e4a5a 50%, #d4b483 50%);"><span>Mauve & Gold</span></div>
+                        <div class="color-box" style="background: linear-gradient(to right, #2c3e5d 50%, #ffffff 50%);"><span>Navy & White</span></div>
+                    </div>
+                    
+                    <h4>Application Ideas:</h4>
+                    <ul style="margin-bottom: 20px; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">Horizontal divide at chair rail height</li>
+                        <li style="margin-bottom: 8px;">Vertical split to define room areas</li>
+                        <li style="margin-bottom: 8px;">Curved lines for a playful, organic feel</li>
+                        <li style="margin-bottom: 8px;">Geometric shapes for modern spaces</li>
+                    </ul>
+                    
+                    <a href="services.html" class="btn">Learn About Our Services</a>
+                </div>
+            </div>
+
+            <!-- Textured Finishes -->
+            <div class="trend-card">
+                <div class="trend-card-header">
+                    <i class="fas fa-brush"></i>
+                    <h3>Textured Finishes</h3>
+                </div>
+                <div class="trend-card-content">
+                    <p>From lime wash to Venetian plaster, textured finishes add depth and character to walls. These techniques create movement and visual interest that flat paint can't achieve.</p>
+                    <p>Perfect for feature walls, fireplace surrounds, and entryways where you want to make a statement.</p>
+                    
+                    <h4>Popular Textured Finishes:</h4>
+                    <div class="color-palettes">
+                        <div class="color-box" style="background-color: #e6d5b8;"><
